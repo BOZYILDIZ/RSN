@@ -1,0 +1,35 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build and Dependency Directories
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+node_modules/
+
+# Logs and Temporary Files
+*.log
+*.tmp
+*.temp
+
+# Sensitive Information
+.env
+*.key
+*.pem
+secrets/
+
+# Project-specific
+*.bak
+*.backup
