@@ -39,6 +39,44 @@ To become the world's #1 data recovery solution by combining:
 
 ---
 
+## 🚀 Getting Started
+
+### For Developers
+
+This project is in **bootstrap phase** with infrastructure ready for Phase 1 implementation.
+
+#### Quick Start
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/lekesiz/RSN.git
+   cd RSN
+   ```
+
+2. **Setup development environment**:
+   - See [DEVELOPER_SETUP.md](DEVELOPER_SETUP.md) for detailed instructions (macOS, Linux, Windows)
+
+3. **Understand the architecture**:
+   - See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for system design
+
+4. **Start contributing**:
+   - See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines
+
+### Project Status
+
+**Current Phase**: 🔧 Bootstrap Infrastructure ✅
+- ✅ Repository structure (src/, tests/, docs/)
+- ✅ GitHub Actions CI/CD pipeline
+- ✅ Issue & PR templates
+- ✅ Documentation (DEVELOPER_SETUP, CONTRIBUTING, CODE_OF_CONDUCT)
+- ⏳ Phase 1: Core recovery engine implementation (starts Week 1)
+
+### Internal Resources
+
+- **[README-BOZ.md](README-BOZ.md)** — Équipe BOZ development plan & backlog
+- **[boz-log.txt](boz-log.txt)** — Execution journal & initialization notes
+
+---
+
 ## 📚 Documentation
 
 This repository contains comprehensive project documentation for RecoverySoftNetz:
