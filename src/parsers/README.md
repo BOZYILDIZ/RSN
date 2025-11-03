@@ -7,6 +7,47 @@ This directory contains implementations of filesystem parsers for RecoverySoftNe
 3. **Extracting** recoverable files and their metadata
 4. **Computing** recovery statistics
 
+## Phase 5E: Device I/O Integration
+
+**Status**: I/O Abstraction Layer Ready ✅
+
+The parsers now have access to a **cross-platform Device I/O abstraction layer** (`src/io/device_io.h/cpp`) that handles low-level block device operations:
+
+- **Linux**: POSIX I/O + ioctl(BLKGETSIZE64)
+- **macOS**: BSD I/O + ioctl(DKIOCGETBLOCKCOUNT)
+- **Windows**: CreateFile() + ReadFile()
+
+### Integration via DeviceIOAdapter
+
+The `DeviceIOAdapter` (`src/io/device_io_adapter.h/cpp`) provides:
+- Device open/close management
+- Filesystem detection via magic numbers
+- Automatic parser routing
+- Error handling and statistics collection
+
+See `docs/DEVICE_IO_INTEGRATION.md` for integration details.
+
+### Parser Updates (TODO - Phase 5E+)
+
+Each parser is currently using **mock implementations** but can now be upgraded:
+
+```cpp
+// Replace this (mock):
+bool NTFSParser::ReadBootSector(const std::string &device_path, ...) {
+    // Mock data
+}
+
+// With this (real I/O):
+bool NTFSParser::ReadBootSector(const std::string &device_path, ...) {
+    DeviceIO io;
+    io.Open(device_path);
+    auto data = io.ReadBlockVector(0, 512);
+    // Parse real data
+}
+```
+
+---
+
 ## Implemented Parsers
 
 ### NTFS Parser (`ntfs_parser.h/cpp`)
