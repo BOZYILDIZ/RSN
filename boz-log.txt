@@ -1158,3 +1158,29 @@ Status: ✅ READY FOR PR & MERGE
 Next Phase: 5E (Device I/O Implementation) ou review PRs
 
 ================================================================================
+PHASE 5E — DEVICE I/O IMPLEMENTATION (NOUVELLE)
+================================================================================
+
+📅 Date Phase 5E : 2025-11-03 (lundi)
+⏱️ Heure : 10:50 GMT+1
+🎯 Objectif : Implémenter I/O cross-platform réel pour remplacer parsing stubs
+  • Core I/O abstraction layer (DeviceIO)
+  • Intégration parsers NTFS/APFS/ext4
+  • Détection filesystem runtime
+  • Lecture blocks réelle depuis disque
+🔗 Branche : `boz/phase-5e-device-io` (créée depuis boz/phase-5d-ui)
+
+================================================================================
+PHASE 5E.1 — INITIALISATION BRANCHE
+================================================================================
+
+[10:50] ✅ Étape 5E.1.1 : Création branche
+Command:  git checkout -b boz/phase-5e-device-io origin/boz/phase-5d-ui
+Status:   ✅ Branch créée et configurée
+Branch:   boz/phase-5e-device-io
+Tracking: origin/boz/phase-5d-ui
+
+[10:51] ✅ Étape 5E.1.2 : Log init
+Adding Phase 5E documentation to boz-log.txt...
+
+================================================================================
