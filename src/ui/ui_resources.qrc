@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RCC>
+    <!-- Qt6 Resource Collection for RecoverySoftNetz UI -->
+    <!--
+         This file defines UI resources (icons, stylesheets, images)
+         used throughout the application.
+
+         Structure:
+         - /icons/ : Application and UI element icons
+         - /stylesheets/ : Qt stylesheet files
+         - /images/ : Background images, logos
+    -->
+
+    <qresource prefix="/icons">
+        <!-- Application Icons -->
+        <file>rsn_logo.svg</file>
+        <file>rsn_logo_dark.svg</file>
+
+        <!-- Device Icons -->
+        <file>device_sata.svg</file>
+        <file>device_nvme.svg</file>
+        <file>device_usb.svg</file>
+
+        <!-- Filesystem Icons -->
+        <file>fs_ntfs.svg</file>
+        <file>fs_apfs.svg</file>
+        <file>fs_ext4.svg</file>
+        <file>fs_unknown.svg</file>
+
+        <!-- File Type Icons -->
+        <file>file_document.svg</file>
+        <file>file_image.svg</file>
+        <file>file_video.svg</file>
+        <file>file_audio.svg</file>
+        <file>file_archive.svg</file>
+        <file>file_directory.svg</file>
+        <file>file_deleted.svg</file>
+
+        <!-- Action Icons -->
+        <file>action_scan.svg</file>
+        <file>action_stop.svg</file>
+        <file>action_pause.svg</file>
+        <file>action_refresh.svg</file>
+        <file>action_export.svg</file>
+        <file>action_preview.svg</file>
+        <file>action_settings.svg</file>
+    </qresource>
+
+    <qresource prefix="/stylesheets">
+        <!-- Main Application Stylesheet -->
+        <file>main.qss</file>
+
+        <!-- Component-specific Stylesheets -->
+        <file>device_wizard.qss</file>
+        <file>progress_monitor.qss</file>
+        <file>results_view.qss</file>
+    </qresource>
+
+    <qresource prefix="/images">
+        <!-- Background Images -->
+        <file>background_light.png</file>
+        <file>background_dark.png</file>
+
+        <!-- Logos -->
+        <file>rsn_banner.png</file>
+        <file>team_booz_logo.png</file>
+    </qresource>
+
+</RCC>
