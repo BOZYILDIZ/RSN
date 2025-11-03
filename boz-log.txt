@@ -937,3 +937,28 @@ Status: ✅ READY FOR PR & MERGE
 Next Phase: 5D (UI Improvements) or implementation device I/O
 
 ================================================================================
+PHASE 5D — QT6 USER INTERFACE (NOUVELLE)
+================================================================================
+
+📅 Date Phase 5D : 2025-11-03 (lundi)
+⏱️ Heure : 10:20 GMT+1
+🎯 Objectif : Créer interface graphique Qt6 fonctionnelle (squelette UI)
+  • Device Wizard → sélection périphérique et détection FS
+  • Progress Monitor → scan temps réel
+  • Results View → tableau résultats avec stats
+🔗 Branche : `boz/phase-5d-ui` (créée depuis boz/phase-5c-ext4-parser)
+
+================================================================================
+PHASE 5D.1 — INITIALISATION BRANCHE
+================================================================================
+
+[10:20] ✅ Étape 5D.1.1 : Création branche
+Command:  git checkout -b boz/phase-5d-ui origin/boz/phase-5c-ext4-parser
+Status:   ✅ Branch créée et configurée
+Branch:   boz/phase-5d-ui
+Tracking: origin/boz/phase-5c-ext4-parser
+
+[10:20] ✅ Étape 5D.1.2 : Log init
+Adding Phase 5D documentation to boz-log.txt...
+
+================================================================================
