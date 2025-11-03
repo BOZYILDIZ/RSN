@@ -47,17 +47,50 @@ This directory contains implementations of filesystem parsers for RecoverySoftNe
 
 ---
 
-### APFS Parser (Planned — Phase 5B)
+### APFS Parser (`apfs_parser.h/cpp`)
+
+**Status**: Phase 5B — Skeleton Implementation
 
 **Filesystem**: APFS (Apple File System)
-- macOS 10.13+, iOS 10.3+
-- Modern Apple systems
+- macOS 10.13+ (High Sierra and later)
+- iOS 10.3+, iPadOS, tvOS, watchOS
+- APFS versions 1.0, 2.0, 3.0
 
-**Planned Features**:
-- Container parsing
-- B-tree navigation
-- Snapshot support
-- Encryption handling
+**Supported Features**:
+- Container and volume detection
+- Container superblock parsing
+- Volume superblock extraction
+- B-tree navigation for file records
+- Inode parsing and metadata extraction
+- Deleted file detection and recovery
+- Snapshot support for point-in-time recovery
+- Block sizes: 4KB to 64KB (typically 4KB)
+
+**Key Components**:
+- `ReadContainerSuperblock()` — Validate APFS container
+- `ParseVolumeSuperblock()` — Extract volume metadata
+- `ParseVolumeBTree()` — Navigate file tree structure
+- `ParseInode()` — Extract individual file records
+- `GetAvailableSnapshots()` — List recovery points
+- `IsInodeDeleted()` — Identify deleted files
+
+**Implementation Notes**:
+- Container magic: "NXSB" (0x4253584E)
+- Volume magic: "APSB" (0x42535041)
+- Inode magic: "INOD" (0x494E4F44)
+- B-tree node magic: "NODE" (0x4E4F4445)
+- Default block size: 4096 bytes
+- Snapshots: Time Machine and manual snapshots
+
+**TODO**:
+- [ ] Actual device I/O (macOS-specific block device APIs)
+- [ ] B-tree node parsing and traversal
+- [ ] Snapshot timestamp extraction
+- [ ] Compression support (zlib, lz4)
+- [ ] Encryption handling (FileVault)
+- [ ] Large volume optimization (>1TB)
+- [ ] Fusion drive support (multi-device volumes)
+- [ ] Error recovery for corrupted sectors
 
 ---
 
