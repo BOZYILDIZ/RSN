@@ -814,3 +814,22 @@ PHASE 5B — VALIDATION
 ├─ Documentation: ✅ README.md et boz-log.txt mis à jour
 └─ Status: ✅ PHASE 5B VALIDÉE — PRÊT POUR PHASE 5C
 
+
+================================================================================
+PHASE 5C — ext4 PARSER (INIT)
+================================================================================
+
+[09:46] 🔄 Étape 5C.0 : Initialisation Phase 5C
+Command:  git checkout -b boz/phase-5c-ext4-parser origin/boz/phase-5b-apfs-parser
+Status:   ✅ Branche créée et alignée avec Phase 5B
+Tracking: origin/boz/phase-5b-apfs-parser
+
+[09:46] ✅ Phase 5C Objectives:
+  • Créer ext4 parser squelette (Linux filesystem support)
+  • Superblock (magic 0xEF53) + Group Descriptors + Inode table + Dentry parsing
+  • Journal JBD2 placeholder
+  • 16+ unit tests (>80% coverage target)
+  • Documentation complète
+
+[09:47] 🔄 Début implémentation Phase 5C...
+
