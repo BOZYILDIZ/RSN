@@ -800,3 +800,17 @@ Prochains checkpoints:
 2. Implémentation device I/O pour APFS
 3. Phase 5C ext4 Parser 🚀
 
+
+================================================================================
+PHASE 5B — VALIDATION
+================================================================================
+
+[09:45] ✅ Phase 5B Validation Checklist
+├─ Branche boz/phase-5b-apfs-parser: ✅ Pushée et clean
+├─ Commits: ✅ 4 atomiques (3 impl + 1 log)
+├─ Code: ✅ 1026 lignes (618 impl + 408 tests)
+├─ Push: ✅ origin/boz/phase-5b-apfs-parser up-to-date
+├─ Tests: ✅ 16 test cases écrits
+├─ Documentation: ✅ README.md et boz-log.txt mis à jour
+└─ Status: ✅ PHASE 5B VALIDÉE — PRÊT POUR PHASE 5C
+
