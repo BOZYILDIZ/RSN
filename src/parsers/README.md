@@ -94,18 +94,52 @@ This directory contains implementations of filesystem parsers for RecoverySoftNe
 
 ---
 
-### ext4 Parser (Planned — Phase 5C)
+### ext4 Parser (`ext4_parser.h/cpp`)
+
+**Status**: Phase 5C — Skeleton Implementation
 
 **Filesystem**: ext4 (Fourth Extended Filesystem)
-- Linux primary filesystem
-- RHEL, Ubuntu, Debian, Fedora
-- Embedded systems
+- Linux kernel 2.6.28+ (mainline ext4 support)
+- RHEL, Ubuntu, Debian, Fedora, Alpine (and all major distributions)
+- Primary filesystem for Linux systems
+- Embedded systems and IoT devices
 
-**Planned Features**:
-- Superblock parsing
-- inode table traversal
-- Extent tree parsing
-- Sparse file handling
+**Supported Features**:
+- Superblock detection (magic 0xEF53)
+- Block group descriptors parsing
+- Inode table traversal
+- Directory entry parsing for filenames
+- Deleted inode detection and recovery
+- Journal support (JBD2)
+- Feature flag detection
+- Block sizes: 1KB–64KB
+- Inode sizes: 128–256+ bytes
+
+**Key Components**:
+- `ReadSuperblock()` — Superblock at offset 1024
+- `ParseGroupDescriptors()` — Block group metadata
+- `ParseInodeTable()` — Inode records extraction
+- `ParseDirectoryEntry()` — Filename extraction
+- `IsInodeDeleted()` — Detect unlinked inodes
+- `GetJournalInfo()` — JBD2 journal information
+
+**Implementation Notes**:
+- Superblock magic: 0xEF53
+- Superblock offset: 1024 bytes
+- Block group descriptors: Follow superblock
+- Inode deletion: i_dtime field (non-zero if deleted)
+- Journal: JBD2 standard for crash recovery
+- Extent trees: Large file support (ext4 feature)
+
+**TODO**:
+- [ ] Actual device I/O (block device reading)
+- [ ] Extent tree parsing
+- [ ] Journal (JBD2) recovery
+- [ ] Compressed inode support
+- [ ] Encrypted directory handling
+- [ ] Large filesystem optimization (>1TB)
+- [ ] Inline data and extended attributes
+- [ ] Parallel group processing
 
 ---
 
